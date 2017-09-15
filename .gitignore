@@ -26,3 +26,6 @@ vendor
 /samples/Github_*.*
 /samples/results
 /composer.lock
+
+### Common if the common components have been cloned. 
+Common
