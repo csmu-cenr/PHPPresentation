@@ -1,4 +1,11 @@
 <?php
+
+require_once __DIR__ . '/../src/PhpPresentation/Autoloader.php';
+\PhpOffice\PhpPresentation\Autoloader::register();
+
+require_once __DIR__ . '/../Common/Autoloader.php';
+\PhpOffice\Common\Autoloader::register();
+
 /**
  * Header file
 */
@@ -18,16 +25,17 @@ use PhpOffice\PhpPresentation\Style\Bullet;
 use PhpOffice\PhpPresentation\Style\Color;
 
 error_reporting(E_ALL);
+
 define('CLI', (PHP_SAPI == 'cli') ? true : false);
 define('EOL', CLI ? PHP_EOL : '<br />');
 define('SCRIPT_FILENAME', basename($_SERVER['SCRIPT_FILENAME'], '.php'));
 define('IS_INDEX', SCRIPT_FILENAME == 'index');
 
-require_once __DIR__ . '/../src/PhpPresentation/Autoloader.php';
-Autoloader::register();
+date_default_timezone_set("UTC"); 
 
-require_once '/home/dashedup/dashedUpV3.0-staging/PHPOffice/Common/Autoloader.php';
-+\PhpOffice\Common\Autoloader::register();
+
+
+#+\PhpOffice\Common\Autoloader::register();
 
 // Set writers
 $writers = array('PowerPoint2007' => 'pptx', 'ODPresentation' => 'odp');
