@@ -268,6 +268,16 @@ class Series implements ComparableInterface
     }
 
     /**
+     * multiply every value in array by 100
+     */
+    public function valuesMultiplyBy100()
+    {
+        foreach($this->values as $index => $value){
+            $this->values[$index] = 100 * floatval($value);
+        }
+    }
+
+    /**
      * Set Values
      *
      * @param  array                            $value
