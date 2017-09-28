@@ -520,6 +520,7 @@ class PptCharts extends AbstractDecoratorWriter
 
         // Write Y axis?
         if ($chartType->hasAxisY()) {
+            $subject->getAxisY()->setFormatCode("0.0%");
             $this->writeAxis($objWriter, $subject->getAxisY(), Chart\Axis::AXIS_Y, $chartType);
         }
 
