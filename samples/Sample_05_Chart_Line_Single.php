@@ -58,6 +58,7 @@ function fnSlide_Scatter(PhpPresentation $objPHPPresentation) {
     $shape->getView3D()->setPerspective(30);
     $shape->getLegend()->getBorder()->setLineStyle(Border::LINE_SINGLE);
     $shape->getLegend()->getFont()->setItalic(true);
+	$shape->getPlotArea()->getAxisY()->setFormatCode('0.0%') ;
 }
 
 // Create new PHPPresentation object
